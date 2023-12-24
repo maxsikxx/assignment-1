@@ -1,39 +1,38 @@
 package models;
-import java.lang.Math;
 
 public class Point {
-
     private double x;
     private double y;
 
-    public Point(double x, double y) {  // This constructor lets you create a point with given coordinates
+    public Point(double x, double y) {
         setX(x);
         setY(y);
     }
 
-    public double distance(Point point) {  // Returns the distances from the provided points to the initial points
-        double xlen = Math.pow(point.getX() - this.x, 2);
-        double ylen = Math.pow(point.getY() - this.y, 2);
-        return Math.sqrt(xlen + ylen);
+    public double distance(Point point) {
+        double xLen = Math.pow(point.getX() - this.x, 2);
+        double yLen = Math.pow(point.getY() - this.y, 2);
+        return Math.sqrt(xLen + yLen);
     }
 
-    public double getX() {  // This method returns the x-coordinate value
+    public double getX() {
         return x;
     }
-    public double getY() {  // This method returns the y-coordinate value
+
+    public double getY() {
         return y;
     }
 
-    public void setX(double x) {  // This method is a setter for x-coordinate value
+    public void setX(double x) {
         this.x = x;
     }
 
-    public void setY(double y) {  // This method is a setter for y-coordinate value
+    public void setY(double y) {
         this.y = y;
     }
 
     @Override
     public String toString() {
-        return "Point { x=" + x + ", y=" + y + '}';
+        return "Point { x=" + x + ", y=" + y + " }";
     }
 }
