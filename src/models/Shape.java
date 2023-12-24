@@ -28,7 +28,7 @@ public class Shape {
 
     public double getAvgSide() {
         return calculatePerimeter() / points.size();
-    }  //  This method returns the average side of the polygon
+    }
 
     public double getLongestSide() {  // This method returns the longest side of the polygon
         int len = points.size();
